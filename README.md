@@ -14,8 +14,8 @@ A full-stack employee directory built using react.
 
 ## Deployement
 
-- [Live on Heroku](/)
-- [GitHub Repo](/)
+- [Live on Heroku](https://stormy-wildwood-90404.herokuapp.com/)
+- [GitHub Repo](https://github.com/Connerjm/Employee-Directory)
 
 ## License
 

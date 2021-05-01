@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body,
+#root {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.wrapper {
+    padding-top: 50px;
+    background: #ECEFF1;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    text-decoration: underline;
+    color: #2A77AE;
+    margin-bottom: 50px;
+}

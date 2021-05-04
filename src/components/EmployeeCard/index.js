@@ -1,7 +1,9 @@
+//Imports
 import React from "react";
 import "./style.css";
 
-function EmployeeCard(props)
+//Defining functional component
+export default function EmployeeCard(props)
 {
     return (
     <div className="card">
@@ -24,5 +26,3 @@ function EmployeeCard(props)
     </div>
     );
 }
-
-export default EmployeeCard;

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default async function getEmployees(howMany)
+export default function getEmployees(howMany)
 {
-    return await axios.get(`https://randomuser.me/api/?results=${howMany}&inc=name,email,phone,picture`);
+    return axios.get(`https://randomuser.me/api/?results=${howMany}&inc=name,email,phone,picture&nat=us`);
 }

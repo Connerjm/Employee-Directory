@@ -1,34 +1,33 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import EmployeeCard from "./components/EmployeeCard";
 import getEmployees from "./utils/API";
 
-class App extends Component
+export default function App()
 {
-    state = { employees: null };
+    const [employees, setEmployees] = useState([]);
 
-    async setEmployees()
+    useEffect(() =>
     {
-        console.log((await getEmployees(20)).data.results);
-        //this.setState({ employees: (await getEmployees(20)).data.results });
-    }
+        getEmployees(20)
+            .then(res =>
+                {
+                    setEmployees(res.data.results);
+                })
+    //eslint-disable-next-line
+    }, []);
 
-    render()
-    {
-        this.setEmployees();
-        return (
-            <div className="wrapper">
-                <h1 className="title">Employee Directory</h1>
-                {this.state.employees.map(employee => (
-                    <EmployeeCard
-                        firstName={employee.name.first}
-                        lastName={employee.name.last}
-                        phone={employee.phone}
-                        email={employee.email}
-                        thumbnail={employee.picture.thumbnail}
-                    />
-                ))}
-            </div>
-    );}
+    return (
+        <div className="wrapper">
+            <h1 className="title">Employee Directory</h1>
+            {employees.map(employee => (
+                <EmployeeCard
+                    firstName={employee.name.first}
+                    lastName={employee.name.last}
+                    phone={employee.phone}
+                    email={employee.email}
+                    thumbnail={employee.picture.large}
+                />
+            ))}
+        </div>
+    );
 }
-
-export default App;

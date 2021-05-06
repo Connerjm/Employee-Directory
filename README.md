@@ -10,7 +10,7 @@
 
 ## Description
 
-A full-stack employee directory built using react.
+A full-stack employee directory built using react. It uses an api call to get an array of random fictional employees and puts their info into cards. These cards can be sorted by name or filtered by title.
 
 ## Deployement
 

@@ -19,7 +19,6 @@ export default function App()
         getEmployees(20)//Get 20 employees for now.
             .then(res => { setOriginal(res.data.results); setEmployees(res.data.results); console.log(res.data.results); })
             .catch(err => { console.error(err); });
-    //eslint-disable-next-line
     }, []);
 
     //Sort option to sort by employee name.
